@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>GoIT</title>
+  <!-- Сюда будет вставлена ссылка на файл стилей -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- endinject -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="img-wrapper">
+        <a href="https://goit.ua/" class="site__logotype">
+          <img
+            srcset="./images/logo.png 100w, ./images/logo@2x.png 200w"
+            src="./img/img3.jpg"
+            alt="company-logo"
+            sizes="100px"
+            height="30"
+            class="site__logotype"
+          />
+        </a>
+      </div>
+  
+      <div class="presentation-wrapper">
+        <section class="presentation">
+          <p class="presentation__title">
+            Бесплатная презентация для тех, кто хочет сменить профессию и начать
+            карьеру в IT-сфере
+          </p>
+          <h1 class="presentation__main-title">
+            Узнай за 1 час каким может быть твой путь в IT
+          </h1>
+          <p class="presentation__description">
+            Как с нуля всего за 3-5 месяцев получить все необходимые знания и
+            навыки для уверенного старта карьеры в IT.
+          </p>
+          <div class="presentation__date">
+            <p class="presentation__nearest">Ближайшая встреча</p>
+            <p class="presentation__address">Киев, 16 декабря 19:00</p>
+          </div>
+        </section>
+  
+        <div class="main-form">
+          <h2 class="main-form__header">
+            Оставьте заявку на участие в бесплатной презентации
+          </h2>
+          <p class="main-form__description">
+            С вами свяжется карьерный консультант и ответит на вопросы.
+          </p>
+          <form action="./telegram/telegram.php" class="form" method="post">
+            <ul class="form__required-items">
+              <li class="form__required-input">
+                <label
+                  ><input
+                    type="text"
+                    name="user_name"
+                    class="form__input"
+                    placeholder="Имя"
+                    required=""
+                    minlength="3"
+                    pattern="[A-Za-zА-Яа-яЁё]{3,20}"
+                    oninvalid="setCustomValidity('Пожалуйста, введите Ваше настоящее имя.')"
+                    onkeyup="setCustomValidity('')"
+                /></label>
+              </li>
+              <li class="form__required-input">
+                <label
+                  ><input
+                    type="text"
+                    name="user_email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    class="form__input"
+                    placeholder="E-mail"
+                    required=""
+                    oninvalid="setCustomValidity('Пожалуйста, введите Ваш адрес электронной почты.')"
+                    onkeyup="setCustomValidity('')"
+                /></label>
+              </li>
+              <li class="form__required-input">
+                <label
+                  ><input
+                    type="text"
+                    name="user_phone"
+                    class="form__input"
+                    placeholder="Телефон"
+                    required=""
+                    minlength="7"
+                    pattern="^\+?3?8?(0\d{9})$"
+                    oninvalid="setCustomValidity('Пожалуйста, введите номер для связи с Вами.')"
+                    onkeyup="setCustomValidity('')"
+                /></label>
+              </li>
+            </ul>
+            <div class="btn-wrap">
+              <button type="submit" class="modal-btn request">
+                оставить заявку
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="policy">
+          <a href="" class="policy__terms">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="consult">
+      <div class="container">
+        <div class="consult__wrapper">
+          <div class="consult__title">
+            <h3 class="section-title title-style">
+              На консультации ты получишь ответы на все ключевые вопросы про IT
+            </h3>
+          </div>
+          <div class="consult__info">
+            <ul class="consult__list">
+              <li class="consult__list-item wow">
+                <p class="consult__list-item-description">
+                  Что из себя представляет IT-сфера в Украине на самом деле?
+                </p>
+              </li>
+              <li class="consult__list-item wow">
+                <p class="consult__list-item-description">
+                  Почему IT-сфера растет даже в кризис, а IT компании обеспечивают
+                  идеальные условия работы для специалистов?
+                </p>
+              </li>
+              <li class="consult__list-item wow">
+                <p class="consult__list-item-description">
+                  Какие направления есть в IT рынке и что нужно для старта в каждом
+                  из них?
+                </p>
+              </li>
+              <li class="consult__list-item wow">
+                <p class="consult__list-item-description">
+                  За что специалисты с 3-х летним опытом в IT получают зарплаты по
+                  <span class="consult__list-item-description--span">$2000-3500?</span>
+                </p>
+              </li>
+              <li class="consult__list-item wow">
+                <p class="consult__list-item-description">
+                  Что нужно сделать, чтобы уже через <span class="consult__list-item-description--span">3-5 месяцев</span>
+                  начать
+                  карьеру в IT и получить первую работу с ЗП от <span
+                    class="consult__list-item-description--span">$700</span> до
+                  <span class="consult__list-item-description--span">$1200</span>?
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="materials materials--bg">
+      <div class="materials__container">
+        <h2 class="section-title materials__section-title">
+          Также вы получите личную консультацию по старту карьеры_
+        </h2>
+        <ul class="materials__list">
+          <li class="materials__item materials__item--counter materials__item--line">
+            <p class="materials__item-text">
+              Определите какое направление будет легче, интересней и быстрее освоить
+              <span class="materials__item-text--span">именно вам.</span>
+            </p>
+          </li>
+          <li class="materials__item materials__item--counter materials__item--line">
+            <p class="materials__item-text">
+              Вместе с консультантом сформируете пошаговый план входа в IT
+              <span class="materials__item-text--span">с учетом ваших текущих знаний</span>
+              и навыков.
+            </p>
+          </li>
+          <li class="materials__item materials__item--counter materials__item--line">
+            <p class="materials__item-text">
+              Получите доступ
+              <span class="materials__item-text--span">к 3-м развернутым видео
+              </span>
+              по ключевым направлениям в IT, чтобы самостоятельно изучить все
+              детали.
+            </p>
+          </li>
+        </ul>
+        <button class="modal-btn myBtn materials__modal-btn wow" type="submit" onclick="showModal()">
+          Получить бесплатный доступ ко всем материалам
+        </button>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="stats__container">
+        <h2 class="section-title stats__section-title">
+          Почему сфера IT так интересна
+        </h2>
+        <div class="stats__section-wrapper">
+          <article class="article-review stats__article-review article-review--map">
+            <h3 class="article-review__title">
+              Сегодня подготовили для вас обзор рынка из отчета ассоциации
+              IT Ukraine
+            </h3>
+            <ul class="article-review__list">
+              <li class="article-review__item">
+                <p class="article-review__text">
+                  <span class="article-review__text--span">12634</span> IT-компании
+                  зарегистрированы в Украине
+                </p>
+              </li>
+              <li class="article-review__item">
+                <p class="article-review__text">
+                  <span class="article-review__text--span">2500$</span>
+                  Средний доход IT-специалиста
+                </p>
+              </li>
+              <li class="article-review__item">
+                <p class="article-review__text">
+                  <span class="article-review__text--span">127тыс.</span>
+                  Человек работает в Украинской IT-сфере сейчас
+                </p>
+              </li>
+              <li class="article-review__item">
+                <p class="article-review__text">
+                  <span class="article-review__text--span">2000 </span>Новых
+                  IT-компаний появилось за 2 года
+                </p>
+              </li>
+              <li class="article-review__item">
+                <p class="article-review__text">
+                  <span class="article-review__text--span">83%</span> Всех затрат IT
+                  компаний <br />
+                  - это затраты на оплату труда разработчиков
+                </p>
+              </li>
+              <li class="article-review__item">
+                <p class="article-review__text">
+                  <span class="article-review__text--span">200тыс.</span>
+                  IT-специалистов по прогнозам будет в стране через 4-5 лет
+                </p>
+              </li>
+            </ul>
+            <div class="article-review__advantages-wrapper">
+              <p class="article-review__advantages-title">
+                Доход IT-шников превышает среднюю зарплату по другим отраслям
+              </p>
+              <ul class="article-review__advantages-list">
+                <li class="article-review__advantages-item">
+                  <p class="article-review__advantages-text">
+                    <span class="article-review__advantages-text--span">в 7 раз </span>при официальном трудоустройстве
+                    IT-специалиста
+                  </p>
+                </li>
+                <li class="article-review__advantages-item">
+                  <p class="article-review__advantages-text">
+                    <span class="article-review__advantages-text--span">в 7,8 раз </span>при работе через ФОП
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </article>
+    
+          <div class="offer stats__offer-wrapper">
+            <h2 class="section-title offer__section-title">
+              При этом IT компании предлагают...
+            </h2>
+    
+            <ul class="offer__list">
+              <li class="offer__item offer__item--animation-1 wow">
+                <p class="offer__text">Стабильно высокие зарплаты в долларах.</p>
+              </li>
+              <li class="offer__item offer__item--animation-2 wow">
+                <p class="offer__text">
+                  Стабильный карьерный рост согласно вашим реальным знаниям и
+                  навыкам.
+                </p>
+              </li>
+              <li class="offer__item offer__item--animation-3 wow">
+                <p class="offer__text">Комплексный соц. пакет.</p>
+              </li>
+              <li class="offer__item offer__item--animation-4 wow">
+                <p class="offer__text">
+                  Отличные условия труда в современных офисах.
+                </p>
+              </li>
+              <li class="offer__item offer__item--animation-5 wow">
+                <p class="offer__text">
+                  Гибкий рабочий график и возможность работы даже из дома.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="it-direction radial-gradient">
+      <h1 class="visually-hidden">it-direction</h1>
+      <div class="container clearfix">
+        <div class="it-direction__box-1">
+          <h3 class="it-direction__title">Устал растрачивать свой потенциал, работая за копейки в стагнирующей отрасли на
+            ненависной тебе работе?</h3>
+        </div>
+        <div class="it-direction__box-2">
+          <span class="it-direction__descr">Cейчас на IT рынке работы намного больше, чем квалифицированных кадров,
+            способных ее выполнять.</span>
+          <span class="it-direction__descr--thin">Работы, за которую платят много и без задержек. Потому что конкуренция за
+            толковых специалистов между компаниями крайне высока. И эта тенденция будет только усиливаться.</span>
+        </div>
+        <div class="it-direction__box-3">
+          <h2 class="section-title fixed-title">Узнай, как именно начнется твой путь в IT_</h2>
+          <button class="modal-btn fix-modal-btn wow animation-target" type="submit" onclick="showModal()">хочу узнать свой
+            путь в it</button>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+        <div class="about-wrapper">
+            <div class="titles-wrapper mobile-custom-container container">
+                <h2 class="titles-wrapper__main-title section-title wow animation_4">Кто мы такие и почему всё это
+                    рассказываем_</h2>
+                <h3 class="titles-wrapper__awards-title about-list-title">Награды</h3>
+            </div>
+            <div class="awards mobile-custom-container">
+                <h3 class="awards__title awards__title--desktop about-list-title wow animation_3">Награды</h3>
+                <ul class="awards-list">
+                    <li class="awards-list__item">
+                        <h4 class="awards-list__title">Best IT education 2015</h4>
+                        <p class="awards-list__paragraph"><span class="awards-list__paragraph--span">Награждена компания
+                                GoIT</span> за вклад в подготовку сильных Junior-специалистов.</p>
+                        <img class="awards-list__img"
+                            srcset="images/awards/award1.png 112w, images/awards/award1@2x.png 216w"
+                            src="images/awards/award1.png" sizes="112px" height="161" alt="IT education award 2015">
+                    </li>
+                    <li class="awards-list__item">
+                        <h4 class="awards-list__title">Ukrainian IT awards 2016</h4>
+                        <p class="awards-list__paragraph"><span class="awards-list__paragraph--span">Награжден
+                                сооснователь
+                                GoIT Андрей Пивоваров</span> за выдающийся вклад в IT-обучение украинских
+                            Junior-разработчиков.</p>
+                        <img class="awards-list__img"
+                            srcset="images/awards/award2.png 88w, images/awards/award2@2x.png 176w"
+                            src="images/awards/award2.png" sizes="88px" height="194" alt="Ukrainian IT award 2016">
+                    </li>
+                    <li class="awards-list__item">
+                        <h4 class="awards-list__title">Украинская народная премия 2018</h4>
+                        <p class="awards-list__paragraph"><span class="awards-list__paragraph--span">Победа в номинации
+                                IT-образование 2018</span> Всеукраинский национальный проект определил GoIT
+                            лидером в отрасли IT образования.</p>
+                        <img class="awards-list__img"
+                            srcset="images/awards/award3.png 170w, images/awards/award3@2x.png 340w"
+                            src="images/awards/award3.png" sizes="170px" height="168" alt="Украинская народная премия 2018">
+                    </li>
+                </ul>
+            </div>
+            <div class="article-partner-wrapper mobile-custom-container container">
+                <article class="article">
+                    <h3 class="article__main-title about-list-title wow animation_1">Go for IT</h3>
+                    <h4 class="article__title">GoIT выиграла тендер ПР ООН Украина</h4>
+                    <p class="article__paragraph">На реализацию социального проекта по бесплатному обучению Frontend.
+                        Мы
+                        стали
+                        самой молодой
+                        компанией-парнтером ПР ООН. В рамках проекта Go for IT мы обязались обучить Frondend-разработке 300
+                        переселенцев.</p>
+                </article>
+                <h3 class="article-partner-wrapper__title about-list-title">Партнёры</h3>
+            </div>
+            <section class="partners">
+                <h3 class="partners__title about-list-title wow animation_2">Партнёры</h3>
+                <ul class="partners-list">
+                    <li class="partners-list__item">
+                        <a class="partners-list__link epam-link" href="https://www.epam.com/" target="_blank">
+                            <img class="logo" src="images/links/epam.png" width="59" height="21" alt="epam-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link kuehne-nagel-link" href="https://home.kuehne-nagel.com/"
+                            target="_blank">
+                            <img class="logo" src="images/links/kuehne-nagel.png" width="72" height="38"
+                                alt="kuehne-nagel-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link crytek-link" href="https://www.crytek.com/" target="_blank">
+                            <img class="logo" src="images/links/crytek.png" width="80" height="27" alt="crytek-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link ciklum-link" href="https://www.ciklum.com/" target="_blank">
+                            <img class="logo" src="images/links/ciklum.png" width="138" height="29" alt="ciklum-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link innovecs-link" href="https://innovecs.com/" target="_blank">
+                            <img class="logo" src="images/links/innovecs.png" width="92" height="16" alt="innovecs-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link softserve-career-link"
+                            href="https://career.softserveinc.com/en-us/vacancies" target="_blank">
+                            <img class="logo" src="images/links/softserve-career.png" width="117" height="17"
+                                alt="softserve-career-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link global-logic-link" href="https://www.globallogic.com/"
+                            target="_blank">
+                            <img class="logo" src="images/links/global-logic.png" width="111" height="20"
+                                alt="global-logic-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link alfa-bank-link" href="https://alfabank.ua/en" target="_blank">
+                            <img class="logo" src="images/links/alfa-bank.png" width="109" height="29" alt="alfa-bank-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link goiteens-link" href="https://goiteens.ua/" target="_blank">
+                            <img class="logo" src="images/links/goiteens.png" width="86" height="23" alt="goiteens-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link infopulse-link" href="https://www.infopulse.com/" target="_blank">
+                            <img class="logo" src="images/links/infopulse.png" width="76" height="19" alt="infopulse-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link ubisoft-link" href="https://www.ubisoft.com/en-us/" target="_blank">
+                            <img class="logo" src="images/links/ubisoft.png" width="46" height="34" alt="ubisoft-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link luxoft-link" href="https://www.luxoft.com/" target="_blank">
+                            <img class="logo" src="images/links/luxoft.png" width="72" height="38" alt="luxoft-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link lenal-link" href="https://lenal.eu/" target="_blank">
+                            <img class="logo" src="images/links/lenal.png" width="77" height="19" alt="lenal-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link terrasoft-link" href="https://www.terrasoft.ua/" target="_blank">
+                            <img class="logo" src="images/links/terrasoft.png" width="81" height="16" alt="terrasoft-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link grossum-link" href="https://www.grossum.com/" target="_blank">
+                            <img class="logo" src="images/links/grossum.png" width="88" height="25" alt="grossum-logo">
+                        </a>
+                    </li>
+                    <li class="partners-list__item">
+                        <a class="partners-list__link templatemonster-link" href="https://www.templatemonster.com/"
+                            target="_blank">
+                            <img class="logo" src="images/links/template-monster.png" width="134" height="22"
+                                alt="template-monster-logo">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+  </main>
+  <section class="footer">
+    <h2 class="visually-hidden">website footer</h2>
+    <div class="container">
+      <div class="footer__title-wrap">
+        <h2 class="footer__title wow">
+          <a id="footer-link" href="#footer-link" class="footer__title-wrap-link" title="submit request"
+            onclick="showModal()">оставить
+            заявку</a>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="modal" id="myModal">
+      <div class="main-form main-form--modal">
+          <button id="close">X</button>
+          <h2 class="main-form__header main-form__header--modal">
+              Оставьте заявку на участие в бесплатной презентации
+          </h2>
+          <p class="main-form__description">
+              С вами свяжется карьерный консультант и ответит на вопросы.
+          </p>
+          <form action="./telegram/telegram.php" class="form" method="post">
+              <ul class="form__required-items">
+                  <li class="form__required-input">
+                      <label><input type="text" name="user_name" class="form__input" placeholder="Имя" required=""
+                              minlength="3" pattern="[A-Za-zА-Яа-яЁё]{3,20}"
+                              oninvalid="setCustomValidity('Пожалуйста, введите Ваше настоящее имя.')"
+                              onkeyup="setCustomValidity('')" /></label>
+                  </li>
+                  <li class="form__required-input">
+                      <label><input type="text" name="user_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                              class="form__input" placeholder="E-mail" required=""
+                              oninvalid="setCustomValidity('Пожалуйста, введите Ваш адрес электронной почты.')"
+                              onkeyup="setCustomValidity('')" /></label>
+                  </li>
+                  <li class="form__required-input">
+                      <label><input type="text" name="user_phone" class="form__input" placeholder="Телефон" required=""
+                              minlength="7" pattern="^\+?3?8?(0\d{9})$"
+                              oninvalid="setCustomValidity('Пожалуйста, введите номер для связи с Вами.')"
+                              onkeyup="setCustomValidity('')" /></label>
+                  </li>
+              </ul>
+              <div class="btn-wrap">
+                  <button class="modal-btn request">оставить заявку</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  <!-- Сюда будет всталена ссылка на файл скриптов -->
+  <!-- inject:js -->
+  <script src="js/scripts.js"></script>
+  <!-- endinject -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+</body>
+
+</html>
