@@ -1,0 +1,29 @@
+
+// BACICS + HELPERS
+
+@import 'normalize.scss';
+@import 'helpers/fonts.scss';
+@import 'helpers/variables.scss';
+@import 'helpers/mixins.scss';
+@import 'animate.scss';
+@import 'base.scss';
+@import 'helpers/extras.scss';
+
+// COMPONENTS
+
+@import 'components/section-title.scss';
+@import 'components/modal-btn.scss';
+
+// SECTIONS
+
+@import 'sections/header.scss';
+@import 'sections/consult.scss';
+@import 'sections/materials.scss';
+@import 'sections/stats.scss';
+@import 'sections/it-direction.scss';
+@import 'sections/about.scss';
+@import 'sections/footer.scss';
+
+// MODAL
+
+@import 'modal.scss';

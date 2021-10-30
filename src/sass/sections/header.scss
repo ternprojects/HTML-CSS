@@ -1,0 +1,309 @@
+.header {
+  @include font($fc: $third-text-color);
+  background-image: radial-gradient(
+    ellipse at right,
+    #144076 0%,
+    #144076 0%,
+    #0e0f16 74%,
+    #0e0f16 100%
+  );
+  text-align: left;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.img-wrapper {
+  margin-bottom: 30px;
+}
+
+.site__logotype {
+  height: 30px;
+}
+
+.presentation {
+  &__date {
+    @include font($fc: #f9ae23, $ls: 0.56);
+    margin-bottom: 20px;
+  }
+
+  &__address {
+    @include font($fs: 20px, $fc: #f9ae23, $ls: 0.56, $fw: 800);
+  }
+
+  .presentation__description {
+    @include font($lh: 1.3, $fc: $third-text-color);
+    margin-bottom: 30px;
+  }
+
+  &__main-title {
+    @include font($fc: $secondary-text-color, $lh: 1.3, $fs: 20px, $fw: 700);
+    margin-bottom: 25px;
+  }
+
+  &__nearest {
+    @include font($fw: 700, $fc: #f9ae23);
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    @include font($fc: $third-text-color, $ls: -0.8);
+    margin-bottom: 24px;
+  }
+}
+
+.main-form {
+  @include font;
+  @include space($hh: 100%, $ww: 100%);
+  background-color: $third-text-color;
+  box-shadow: 0 12px 70px 0 rgba(121, 139, 188, 0.5);
+  padding: 20px 17px 0 17px;
+  margin-bottom: 10px;
+
+  &__header {
+    @include font($fs: 16px, $fw: 700, $lh: 1.25);
+    margin-bottom: 20px;
+  }
+
+  .main-form__description {
+    @include font($fs: 13px, $fw: 300);
+    margin-bottom: 16px;
+  }
+}
+
+.form {
+  &__input {
+    width: 100%;
+    padding: 10px;
+    border: solid 0.1px;
+
+    &:required:focus {
+      &:valid:not(:placeholder-shown) {
+        border-color: green;
+        border-width: 1px;
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        border-color: red;
+        border-width: 1px;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__required-items {
+    @include space(100%, 100%);
+    margin-bottom: 20px;
+  }
+
+  &__required-input {
+    @include space($hh: 40px, $ww: 100%);
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+}
+
+input:required:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+input:required:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+.btn-wrap {
+  padding-bottom: 24px;
+}
+
+.request {
+  @include space(100%, 40px);
+  text-transform: uppercase;
+  transition: all 500ms linear;
+  border: none;
+
+  &:hover {
+    box-shadow: 0px 2px 20px 10px rgba(255, 107, 8, 0.59);
+    animation: pulse 400ms linear;
+  }
+}
+
+.policy {
+  font-size: 13px;
+  text-align: center;
+
+  &__terms {
+    color: rgb(93, 96, 102);
+    text-decoration: none;
+    transition: all 500ms linear;
+  }
+
+  .policy__terms:hover {
+    color: $secondary-color;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 620px;
+  }
+
+  .presentation {
+    &__title {
+      @include font($fc: $third-text-color, $ls: 1.3);
+      margin-bottom: 30px;
+    }
+
+    &__main-title {
+      @include font(
+        $fc: $secondary-text-color,
+        $lh: 1.3,
+        $fs: 40px,
+        $fw: 700,
+        $ls: -1.6px
+      );
+    }
+
+    .presentation__description {
+      @include font($lh: 1.444, $fc: $third-text-color, $fw: 500, $fs: 18px);
+      margin-bottom: 23px;
+    }
+
+    &__nearest {
+      margin-bottom: 5px;
+    }
+
+    &__address {
+      @include font($fs: 40px, $fc: #f9ae23, $ls: -1.6, $fw: 900);
+    }
+  }
+
+  .main-form {
+    padding: 40px 76px 0;
+    margin-bottom: 10px;
+
+    &__header {
+      @include font($fs: 24px, $fw: 700, $lh: 1.2);
+      text-align: center;
+      margin-bottom: 23px;
+    }
+
+    &__description {
+      line-height: 1.53;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 50px 0 95px;
+  }
+
+  .img-wrapper {
+    margin: 0px 0 75px 0;
+  }
+
+  .presentation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+
+  .presentation {
+    max-width: 50%;
+
+    &__title {
+      @include font($fc: $third-text-color, $lh: 1.5, $fs: 20px);
+      margin-bottom: 48px;
+    }
+
+    &__main-title {
+      @include font(
+        $fc: $secondary-text-color,
+        $lh: 1.2,
+        $fw: 700,
+        $ls: -1.6px,
+        $fs: 60px
+      );
+      margin-bottom: 54px;
+      animation: flipInX 800ms linear;
+    }
+
+    .presentation__description {
+      font-size: 35px;
+      line-height: 1.2;
+    }
+
+    &__nearest {
+      font-size: 29.208px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    &__address {
+      font-size: 46px;
+    }
+  }
+
+  .main-form {
+    max-width: 42%;
+    height: 100%;
+    padding: 40px 35px 50px 35px;
+
+    &__header {
+      @include font($fs: 35px, $fw: 700, $lh: 1.2);
+      text-align: left;
+      margin-bottom: 23px;
+    }
+
+    .main-form__description {
+      font-size: 18px;
+      line-height: 1.556;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form {
+    &__input {
+      width: 390px;
+      height: 60px;
+      padding: 10px;
+      border: solid 0.1px;
+    }
+
+    &__required-input:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .form__required-items {
+      margin-bottom: 40px;
+    }
+
+    .request {
+      @include space(390px, 60px);
+    }
+
+    .btn-wrap {
+      margin-top: 20px;
+    }
+  }
+
+  .policy {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-5px);
+    right: 146px;
+  }
+}

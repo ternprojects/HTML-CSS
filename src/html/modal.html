@@ -1,0 +1,36 @@
+<div class="modal" id="myModal">
+    <div class="main-form main-form--modal">
+        <button id="close">X</button>
+        <h2 class="main-form__header main-form__header--modal">
+            Оставьте заявку на участие в бесплатной презентации
+        </h2>
+        <p class="main-form__description">
+            С вами свяжется карьерный консультант и ответит на вопросы.
+        </p>
+        <form action="./telegram/telegram.php" class="form" method="post">
+            <ul class="form__required-items">
+                <li class="form__required-input">
+                    <label><input type="text" name="user_name" class="form__input" placeholder="Имя" required=""
+                            minlength="3" pattern="[A-Za-zА-Яа-яЁё]{3,20}"
+                            oninvalid="setCustomValidity('Пожалуйста, введите Ваше настоящее имя.')"
+                            onkeyup="setCustomValidity('')" /></label>
+                </li>
+                <li class="form__required-input">
+                    <label><input type="text" name="user_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            class="form__input" placeholder="E-mail" required=""
+                            oninvalid="setCustomValidity('Пожалуйста, введите Ваш адрес электронной почты.')"
+                            onkeyup="setCustomValidity('')" /></label>
+                </li>
+                <li class="form__required-input">
+                    <label><input type="text" name="user_phone" class="form__input" placeholder="Телефон" required=""
+                            minlength="7" pattern="^\+?3?8?(0\d{9})$"
+                            oninvalid="setCustomValidity('Пожалуйста, введите номер для связи с Вами.')"
+                            onkeyup="setCustomValidity('')" /></label>
+                </li>
+            </ul>
+            <div class="btn-wrap">
+                <button class="modal-btn request">оставить заявку</button>
+            </div>
+        </form>
+    </div>
+</div>

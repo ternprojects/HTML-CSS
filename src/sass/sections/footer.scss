@@ -1,0 +1,75 @@
+.footer {
+  position: relative;
+  background-image: url('../images/bg_mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  @media (min-resolution: 192dpi) {
+    background-image: url('../images/bg_mobile@2x.jpg');
+  }
+  @media (min-width: 768px) {
+    background-image: url('../images/bg_tablet.jpg');
+  }
+  @media (min-resolution: 192dpi) and (min-width: 768px) {
+    background-image: url('../images/bg_tablet@2x.jpg');
+  }
+  @media (min-width: 1200px) {
+    background-image: url('../images/bg_pc.jpg');
+    padding: 55px 0 95px;
+  }
+  @media (min-resolution: 192dpi) and (min-width: 1200px) {
+    background-image: url('../images/bg_pc@2x.jpg');
+  }
+  &__title {
+  @media (min-width: 1200px) {
+    animation: heartBeat 3s linear;
+  }
+}
+  &__title-wrap {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 390px;
+    @include flex(center, center);
+    @media (min-width: 768px) {
+      padding-top: 100px;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 185px;
+      padding-bottom: 550px;
+    }
+  }
+  &__title-wrap-link {
+    @include font($main-font, $fs: 20px, $fw: 800, $fc: $secondary-text-color, $ls: 0.4px, $lh: 60px);
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      transition: all 500ms linear;
+    &:hover {
+      text-shadow: 1px 2px 20px $secondary-text-color;
+      opacity: 0.59;
+    }
+    &::after {
+      @include space(210px, 100%);
+      content: "";
+      border: 1px solid $secondary-text-color;
+      margin: 0 auto;
+      margin-top: -18px;
+    }
+    @media (min-width: 768px) {
+      @include font($main-font, $fs: 30px, $fw: 800, $fc: $secondary-text-color, $ls: 0.6px, $lh: 60px);
+      &::after {
+        @include space(310px, 100%);
+        margin-top: -12px;
+      }
+    }
+    @media (min-width: 1200px) {
+      @include font($main-font, $fs: 40px, $fw: 800, $fc: $secondary-text-color, $ls: 3px, $lh: 60px);
+      &::after {
+        @include space(450px, 100%);
+        margin-top: -6px;
+      }
+    }
+  }
+}

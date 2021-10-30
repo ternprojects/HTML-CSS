@@ -1,0 +1,5 @@
+.modal-btn {
+  @include font($main-font, 14px, 800, #fff);
+  background-color: #ff6b08;
+  cursor: pointer;
+}

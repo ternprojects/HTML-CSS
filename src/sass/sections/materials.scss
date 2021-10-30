@@ -1,0 +1,161 @@
+.materials__container {
+  max-width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 748px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.materials {
+  padding: 32px 0 38px 0;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    padding: 52px 0 58px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 92px 0 98px;
+  }
+
+  &--bg {
+    background-color: rgb(237, 240, 242);
+  }
+
+  &__section-title {
+    margin-bottom: 34px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 0 80px;
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0;
+      margin-bottom: 108px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 36px;
+    counter-reset: numbers;
+    @include flex(center);
+
+    @media (min-width: 768px) {
+      @include flex(space-evenly);
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 1200px) {
+      justify-content: space-between;
+      margin-bottom: 76px;
+    }
+  }
+
+  &__item {
+    width: 225px;
+    background-color: $third-text-color;
+    box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
+      -18px 14px rgb(230, 233, 235);
+    height: 230px;
+    position: relative;
+    padding: 40px 48px 0 30px;
+
+    @media (min-width: 1200px) {
+      width: 350px;
+      height: 278px;
+      padding: 62px 24px 0 30px;
+      box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
+        -20px 20px rgb(230, 233, 235);
+    }
+
+    &--counter::before {
+      position: absolute;
+      counter-increment: numbers;
+      content: '0'counters(numbers, '0');
+      top: -38px;
+      right: -2px;
+      @include font($main-font, 50px, 700, rgb(251, 252, 251));
+      z-index: -1;
+
+      @media (min-width: 768px) {
+        font-size: 70px;
+        top: -53px;
+        right: -3px;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 150px;
+        top: -114px;
+        right: -6px;
+      }
+    }
+
+    &--line::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      background-color: $secondary-text-color;
+      top: 24px;
+      left: -13px;
+
+      @media (min-width: 1200px) {
+        top: 44px;
+      }
+    }
+
+    &-text {
+      @include font($main-font, 16px, 400, $main-text-color, 22px);
+      letter-spacing: -0.64px;
+
+      @media (min-width: 1200px) {
+        @include font($fs: 18px, $lh: 35px);
+        letter-spacing: -0.72px;
+      }
+
+      &--span {
+        font-weight: 700;
+      }
+    }
+
+    @media (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__modal-btn {
+    @include space(225px, 106px);
+    text-align: center;
+    @include font($fs: 14px, $fw: 800, $fc: $third-text-color, $lh: 1.429);
+    text-transform: uppercase;
+    border: none;
+    margin: 0 auto;
+    transition: all 500ms linear;
+
+    &:hover {
+      box-shadow: 0px 2px 20px 10px rgba(255, 107, 8, 0.59);
+    }
+
+    @media (min-width: 768px) {
+      @include space(530px, 70px);
+      text-transform: none;
+      font-size: 18px;
+    }
+
+    @media (min-width: 1200px) {
+      @include space(813px, 109px);
+      font-size: 25px;
+      animation: pulse 600ms linear;
+    }
+  }
+}

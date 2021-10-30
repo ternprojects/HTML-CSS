@@ -1,0 +1,134 @@
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.it-direction {
+  background-color: #181c27;
+  &__box-1 {
+    padding-top: 40px;
+    @media (min-width: 768px) {
+      padding-top: 62px;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 110px;
+      width: 650px;
+      margin-bottom: 72px;
+    }
+  }
+  &__box-2 {
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+      width: 352px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 1200px) {
+      float: right;
+    }
+  }
+  &__box-3 {
+    padding-bottom: 42px;
+    @media (min-width: 768px) {
+      padding-bottom: 64px;
+    }
+    @media (min-width: 1200px) {
+      padding-bottom: 114px;
+    }
+  }
+   &__title {
+    @include font($main-font, $fs: 16px, $fw: 800, $fc: $third-text-color, $ls: -0.64px, $lh: 20px);
+    @media (min-width: 768px) {
+      @include font($main-font, $fs: 22px, $fw: 800, $fc: $third-text-color, $ls: -0.88px, $lh: 30px);
+    }
+    @media (min-width: 1200px) {
+      @include font($main-font, $fs: 30px, $fw: 800, $fc: $third-text-color, $ls: -1.2px, $lh: 35px);
+    }
+  }
+  &__descr {
+    @include font($main-font, 14px, $fw: 800, $fc: $third-text-color, $ls: -0.56px, $lh: 22px);
+    @media (min-width: 768px) {
+      @include font($main-font, 14px, $fw: 700, $fc: $third-text-color, $ls: -0.64px, $lh: 22px);
+    }
+    @media (min-width: 1200px) {
+      @include font($main-font, 18px, $fw: 700, $fc: $third-text-color, $ls: -0.72px, $lh: 35px);
+    }
+  }
+  &__descr--thin {
+    @include font($main-font, 14px, $fw: 300, $fc: $third-text-color, $ls: -0.56px, $lh: 22px);
+    @media (min-width: 768px) {
+      @include font($main-font, 14px, $fw: 300, $fc: $third-text-color, $ls: -0.64px, $lh: 22px);
+    }
+    @media (min-width: 1200px) {
+      @include font($main-font, 18px, $fw: 300, $fc: $third-text-color, $ls: -0.72px, $lh: 35px);
+    }
+  }
+  &__descr::before {
+    @include space(60px, 100%);
+    content: "";
+    background-color: $secondary-text-color;
+    height: 2px;
+    margin-bottom: 28px;
+    margin-top: 26px;
+    @media (min-width: 768px) {
+      margin: 36px 0 18px 0;
+    }
+    @media (min-width: 1200px) {
+      margin: 44px 0 16px 0;
+    }
+  }
+}
+
+.radial-gradient {
+  background: rgba(20, 64, 118, 1);
+  background: radial-gradient(ellipse at right, rgba(20, 64, 118, 1) 0%, rgba(20, 64, 118, 1) 0%, rgba(14, 15, 22, 1) 74%, rgba(14, 15, 22, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#144076', endColorstr='#0e0f16', GradientType=1);
+  @media (min-width: 768px) {
+    background: radial-gradient(ellipse at center, rgba(20, 64, 118, 1) 0%, rgba(20, 64, 118, 1) 0%, rgba(14, 15, 22, 1) 74%, rgba(14, 15, 22, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#144076', endColorstr='#0e0f16', GradientType=1);
+  }
+}
+
+.fixed-title {
+  @include font($main-font, $fs: 19.8px, $fw: 800, $fc: $secondary-text-color, $ls: -1px, $lh: 30px);
+  /* original size: $fs: 20px */
+  margin-bottom: 22px;
+  @media (min-width: 768px) {
+    @include font($main-font, $fs: 39px, $fw: 800, $fc: $secondary-text-color, $ls: -1.6px, $lh: 50px);
+    /* original size: $fs: 40px */
+    margin-bottom: 34px;
+  }
+  @media (min-width: 1200px) {
+    @include font($main-font, $fs: 48px, $fw: 800, $fc: $secondary-text-color, $ls: -1.92px);
+    width: 700px;
+    margin-bottom: 74px;
+  }
+}
+
+.fix-modal-btn {
+  @include font($main-font, 14px, 800, #ffffff);
+  width: 260px;
+  height: 70px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 500ms linear;
+  &:hover {
+    box-shadow: 0px 2px 20px 10px rgba(255, 107, 8, 0.59);
+  }
+  @media (min-width: 768px) {
+    @include font($main-font, $fs: 18px, $fw: 700, $fc: $third-text-color);
+    width: 530px;
+    height: 72px;
+  }
+  @media (min-width: 1200px) {
+    @include font($main-font, $fs: 30px, $fw: 800, $fc: $third-text-color);
+    width: 682px;
+    height: 108px;
+  }
+}
+
+.animation-target {
+  @media (min-width: 1200px) {
+    animation: pulse 600ms linear;
+  }
+}

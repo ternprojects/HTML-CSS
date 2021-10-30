@@ -1,0 +1,160 @@
+.consult {
+  background-color: $third-text-color;
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-item {
+      position: relative;
+      padding-left: 38px;
+      text-align: left;
+      line-height: 1.429;
+
+      &-description--span {
+        font-weight: 800;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 21px;
+      }
+
+      &::before {
+        content: '';
+        @include space(18px, 10px);
+        position: absolute;
+        background-image: url('../images/arrow.png');
+        display: inline-block;
+        left: 0px;
+        top: 3px;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include font;
+    padding-bottom: 60px;
+
+    .title-style {
+      margin-bottom: 22px;
+      padding-top: 36px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 620px;
+  }
+
+  .consult__list-item-description {
+    @include font(
+      $ff: $main-font,
+      $fs: 16px,
+      $fw: 400,
+      $fc: $main-text-color,
+      $ls: 0.54px,
+      $lh: 1.4
+    );
+
+    padding-left: 38px;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__wrapper {
+    @include font;
+
+    .title-style {
+      margin-bottom: 28px;
+      padding-top: 58px;
+      @include font(
+        $ff: $main-font,
+        $fs: 30px,
+        $fw: 700,
+        $fc: $main-text-color,
+        $ls: -2.8px,
+        $lh: 1.4
+      );
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .consult {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 148px;
+      padding-bottom: 102px;
+    }
+
+    &__info {
+      max-width: 50%;
+      padding-top: 50px;
+      @include font(
+        $ff: $main-font,
+        $fs: 18px,
+        $fw: 400,
+        $fc: $main-text-color,
+        $ls: -2.8px,
+        $lh: 1.7
+      );
+    }
+
+    &__title {
+      max-width: 50%;
+      @include font(
+        $ff: $main-font,
+        $fs: 48px,
+        $fw: 700,
+        $fc: $main-text-color,
+        $ls: -1.7px,
+        $lh: 1.3
+      );
+    }
+  }
+
+  .title-style {
+    margin-right: 126px;
+  }
+
+  .consult__list-item:nth-child(1) {
+    animation-name: fadeInRight;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+  }
+
+  .consult__list-item:nth-child(2) {
+    animation-name: fadeInRight;
+    animation-duration: 550ms;
+    animation-timing-function: linear;
+  }
+
+  .consult__list-item:nth-child(3) {
+    animation-name: fadeInRight;
+    animation-duration: 700ms;
+    animation-timing-function: linear;
+  }
+
+  .consult__list-item:nth-child(4) {
+    animation-name: fadeInRight;
+    animation-duration: 850ms;
+    animation-timing-function: linear;
+  }
+
+  .consult__list-item:nth-child(5) {
+    animation-name: fadeInRight;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+  }
+}
